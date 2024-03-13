@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body{
+                font-family:Arial,sans-serif;
+                background-color:#cdd7dd;
+
+            }
+            .calculator{
+                width:300px;
+                height:400px;
+                margin:0 auto;
+                background-color:#333;
+                border:2px solid black;
+                padding:20px;
+                border-radius:10px;
+                box-shadow:0 0 10px rgba(0,0,0,0.2);
+                padding-bottom: 30px;
+            }
+            .display{
+                background-color:#eee;
+                padding:10px;
+                text-align:right;
+                border-radius:5px;
+                margin-bottom:10px;
+            }
+            .display input[type="text"]{
+                border:none;
+                background-color:#eee;
+                font-size:24px;
+                width:100%;
+                box-sizing:border-box;
+                padding:10px;
+            }
+            .btn{
+                display:grid;
+                grid-template-columns:repeat(4,1fr);
+                grid-gap:10px;
+                
+            }
+            button{
+                background-color:#fff;
+                color:#333;
+                border:none;
+                padding:20px;
+                font-size:16px;
+                cursor:pointer;
+                border-radius:20px;
+
+            }
+            button:hover{
+                background-color:rgb(174, 214, 236);
+                transition: background-color 0.3s ease;
+            }
+            button:active {
+               background-color:rgb(144,193,221);
+               transform: translateY(1px);
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <br><br><br><br>
+        <div class="calculator">
+            <div class="display">
+                <input type="text" placeholder="0" id="result">
+            </div>
+            <div class="btn">
+                <button onclick="clearResult()" style="background-color:yellow"><b>AC</b></button>
+                <button onclick="Delete()" style="background-color:rgb(118,187,226);"><b>del</b></button>
+                <button onclick="negate()" style="background-color:rgb(118,187,226);"><b>+/-</b></button>
+                <button onclick="appendValue('/')" style="background-color:rgb(118,187,226);"><b>/</b></button>
+                <button onclick="appendValue('7')"><b>7</b></button>
+                <button onclick="appendValue('8')"><b>8</b></button>
+                <button onclick="appendValue('9')"><b>9</b></button>
+                <button onclick="appendValue('*')" style="background-color:rgb(118,187,226);"><b>x</b></button>
+                <button onclick="appendValue('4')"><b>4</b></button>
+                <button onclick="appendValue('5')"><b>5</b></button>
+                <button onclick="appendValue('6')"><b>6</b></button>
+                <button onclick="appendValue('-')" style="background-color:rgb(118,187,226);"><b>-</b></button>
+                <button onclick="appendValue('1')"><b>1</b></button>
+                <button onclick="appendValue('2')"><b>2</b></button>
+                <button onclick="appendValue('3')"><b>3</b></button>
+                <button onclick="appendValue('+')" style="background-color:rgb(118,187,226);"><b>+</b></button>
+                <button onclick="appendValue('%')"><b>%</b></button>
+                <button onclick="appendValue('0')"><b>0</b></button>
+                <button onclick="appendValue('.')"><b>.</b></button>
+                <button onclick="calculate()" style="background-color:rgb(118,187,226);"><b>=</b></button>
+            </div>
+        </div>
+        <script>
+            let result=document.getElementById('result');
+            function appendValue(val)
+            {
+                result.value+=val;
+            }
+            function clearResult(){
+                result.value='';
+            }
+            function calculate(){
+                result.value=eval(result.value);
+            }
+            function Delete()
+            {
+                result.value = result.value.slice(0, -1);
+            }
+            function negate()
+            {
+                result.value = parseFloat(result.value) * -1;
+            }
+            
+        </script>
+    </body>
+</html>

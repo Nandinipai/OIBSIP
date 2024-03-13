@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Anne Frank</title>
+    <style>
+        body {
+            background-color: rgb(184, 219, 228);
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slidein {
+            font-size: medium;
+            margin: 10px;
+            opacity: 0;
+            transition: opacity 1s;
+            text-align: justify;
+
+        }
+
+        .early-life {
+            font-size: x-large;
+
+        }
+
+        .content {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .points {
+            width: 1200px;
+            padding: 10px 20px;
+        }
+
+        .image-container {
+            margin-left: 100px;
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            transition: transform 0.02s;
+        }
+
+        .image-container img {
+            width: 300px;
+            transform: translateY(-50%);
+            transition: transform 1s, opacity 1s;
+        }
+
+        .image-container img:first-child {
+            transform: translateY(0);
+
+        }
+
+
+
+        .container:not(:first-child) {
+            margin-top: 40px;
+        }
+
+
+        .container:last-child .image-container {
+            margin-bottom: 40px;
+        }
+
+        .header {
+            background-color: rgb(24, 96, 116);
+            top: 0;
+            padding: 10px;
+
+        }
+
+        #anne {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <p style="font-size: xx-large" class="header"><b>Anne Frank</b></p>
+        <img src="Anne_Frank.jpg" height="20%" width="15%" id="anne">
+    </center>
+
+    <div class="container">
+        <div class="content">
+            <div class="points">
+                <p class="early-life"><b>Early Life</b></p>
+
+                <p class="slidein">☛ Anne Frank was born in Frankfurt, Germany, in 1929.</p>
+                <p class="slidein">☛ In 1934, when Anne was four-and-a-half, her family moved to Amsterdam, Netherlands,
+                    due to the rise of Adolf Hitler and the Nazi Party in Germany.</p>
+                <p class="slidein">☛ By May 1940, the Franks were trapped in Amsterdam because of the German occupation
+                    of the Netherlands.</p>
+                <p class="slidein">☛ In 1941, Anne lost her German citizenship and became stateless, even though she
+                    spent most of her life in the Netherlands.</p>
+                <p class="slidein">☛ Although Anne lived in the Netherlands and was considered a de facto Dutch
+                    national, she never officially became a Dutch citizen.</p>
+                <p class="slidein">☛ In July 1942, as persecutions of the Jewish population increased, the Frank family
+                    went into hiding in concealed rooms behind a bookcase in Otto Frank's workplace.</p>
+                <p class="slidein">☛ The hiding place is famously known as the "secret annex."</p>
+                <p class="slidein">☛ Anne regularly wrote in a diary she received as a birthday present in 1942 while in
+                    hiding.</p>
+                <p class="slidein">☛ The family was arrested by the Gestapo on 4 August 1944, bringing an end to their
+                    time in hiding.
+                </p>
+            </div>
+
+            <div class="image-container">
+                <img src="birthplace.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="points">
+                <p class="early-life"><b>Life in Achterhuis</b></p>
+                <p class="slidein">☛On July 6, 1942, the Frank family moved into hiding in the "Achterhuis" (Secret
+                    Annex) above the Opekta offices in Amsterdam to escape persecution during World War II.</p>
+                <p class="slidein">☛The hiding place was concealed by leaving their home in disarray, creating the
+                    impression of a sudden departure, and a note suggested they were going to Switzerland.</p>
+                <p class="slidein">☛The entrance to the Achterhuis was covered by a bookcase to remain undiscovered, and
+                    only a few trusted employees, including Victor Kugler, Johannes Kleiman, Miep Gies, and Bep
+                    Voskuijl, were aware of their presence.</p>
+                <p class="slidein">☛The helpers, risking their lives, provided news, support, and food to the occupants,
+                    aware that sheltering Jews could result in the death penalty.</p>
+                <p class="slidein">☛In July 1942, the Van Pels family joined the Franks in hiding, and later, Fritz
+                    Pfeffer, a dentist and family friend, also became a resident in the confined space.</p>
+                <p class="slidein">☛Tensions arose among the inhabitants due to the cramped conditions, leading to
+                    clashes and strained relationships, particularly with Fritz Pfeffer and the Van Pels family.</p>
+                <p class="slidein">☛Anne Frank initially resented the intrusion of Fritz Pfeffer but later formed a
+                    romantic connection with Peter Van Pels.</p>
+                <p class="slidein">☛Anne documented her relationships with family members in her diary, expressing
+                    closeness with her father and growing closer to her sister Margot during their confinement.</p>
+                <p class="slidein">☛Anne's diary entries reveal her struggles with her mother and her eventual
+                    realization of the misunderstandings that fueled their difficult relationship.</p>
+                <p class="slidein">☛Despite the challenges of hiding, the Frank sisters continued their studies, with
+                    Margot excelling in a correspondence course, and Anne devoted much of her time to reading, studying,
+                    and documenting her thoughts and feelings in her diary.</p>
+            </div>
+
+            <div class="image-container">
+                <img src="AnneFrankHouse_Bookcase.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="points">
+                <p class="early-life"><b>Arrest</b></p>
+                <p class="slidein">☛On the morning of August 4, 1944, the Achterhuis, where Anne Frank and her family
+                    were in hiding, was raided by German uniformed police led by SS-Oberscharführer Karl Silberbauer.
+                </p>
+                <p class="slidein">☛The Franks, Van Pelses, and Pfeffer were apprehended during the raid and taken to
+                    the RSHA headquarters, where they underwent interrogation and were held overnight.</p>
+                <p class="slidein">☛On August 5, 1944, the captured individuals were transferred to the Huis van
+                    Bewaring, an overcrowded prison on the Weteringschans.</p>
+                <p class="slidein">☛Two days later, on August 7, 1944, they were transported to the Westerbork transit
+                    camp, which had seen the passage of over 100,000 Jews, primarily Dutch and German.</p>
+                <p class="slidein">☛Due to their arrest in hiding, the captured individuals were deemed criminals and
+                    were subsequently sent to the Punishment Barracks within the Westerbork camp for hard labor.</p>
+                <p class="slidein">☛This series of events marked the end of the hiding period for Anne Frank and her
+                    companions, leading to their subsequent imprisonment and the beginning of a tragic journey through
+                    the Nazi transit and concentration camp system.</p>
+            </div>
+
+            <div class="image-container">
+                <img src="barracks.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="points">
+                <p class="early-life"><b>Deportation and life in captivity</b></p>
+                <p class="slidein">☛On September 3, 1944, Anne Frank and her family were deported from Westerbork to
+                    Auschwitz. Bloeme Evers-Emden, a friend from Amsterdam, was on the same train.</p>
+                <p class="slidein">☛Upon arrival at Auschwitz, men were separated from women and children. Otto Frank
+                    was separated from his family, and those fit for labor were admitted while others, including 549
+                    children under 15, were sent to gas chambers.</p>
+                <p class="slidein">☛Anne Frank, having turned 15 three months earlier, was spared from immediate death.
+                    She wasn't aware that the entire Achterhuis group had survived the initial selection.</p>
+                <p class="slidein">☛Anne underwent the dehumanizing process at Auschwitz: forced to strip, had her head
+                    shaved, and was tattooed with an identification number.</p>
+                <p class="slidein">☛During the day, the women, including Anne, were used as slave labor, while nights
+                    were spent in overcrowded barracks. Anne displayed a mix of withdrawal and tears when witnessing
+                    children being led to gas chambers, but also demonstrated strength and courage.</p>
+                <p class="slidein">☛Disease spread rapidly, and Anne developed scabies. The sisters were moved to an
+                    infirmary, where their mother, Edith Frank, stopped eating to save rations for her daughters.</p>
+                <p class="slidein">☛In October 1944, the Frank women were scheduled to join a transport to Liebau labor
+                    camp, but Anne's scabies prevented her. Bloeme Evers-Emden went without them.</p>
+                <p class="slidein">☛Selections for relocation to Bergen-Belsen began in October 1944. Over 8,000 women,
+                    including Anne and Margot, were transported. Edith Frank remained and died of disease, starvation,
+                    and exhaustion. Anne briefly reunited with friends Hanneli Goslar and Nanette Blitz in
+                    Bergen-Belsen, sharing her hope to write a book based on her diary after the war. Anne expressed
+                    belief in her parents' death and a desire not to live any longer. These interactions occurred in
+                    late January or early February 1945, and both friends survived the war.</p>
+            </div>
+
+            <div class="image-container">
+                <img src="memorial.jpg">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const elements = document.querySelectorAll('.slidein, .image-container img');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(onIntersection, options);
+        elements.forEach(element => observer.observe(element));
+
+        function onIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    if (entry.target.tagName === 'IMG') {
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

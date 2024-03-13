@@ -1,0 +1,172 @@
+<html>
+<head>
+    <title>Registration-Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, rgb(96, 96, 197), rgb(17, 17, 90));
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: linear-gradient(to right, rgb(30, 30, 95) 50%, rgb(255, 255, 255) 50%);
+            margin: 50px 80px;
+            padding: 70px 100px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.9);
+            height: 469px;
+            display: flex;
+
+        }
+
+        .container2 {
+            text-align: center;
+            color: white;
+            width: 300px;
+            margin-left: 50px;
+            margin-top: 10pxs
+        }
+
+        .container2 p {
+            font-size: 38px;
+            width: 300px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .container2 img {
+            width: 80%;
+            margin-right: 35px;
+            margin-left: 20px;
+        }
+
+        .container3 {
+            text-align: left;
+            margin-left: 250px;
+
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .container3 label {
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 5px;
+            font-size: large;
+
+        }
+
+        .container3 .all {
+
+            padding: 10px;
+            width: 300px;
+            border: 2px solid rgb(30, 30, 95);
+            border-radius: 8px;
+        }
+
+        input[type="text"]:hover,
+        input[type="tel"]:hover,
+        input[type="email"]:hover,
+        input[type="password"]:hover {
+            box-shadow: 0 0 5px;
+            outline: none;
+            
+        }
+
+        .button {
+    background-color: #10297a;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: transform 0.4s;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+         
+        .button2:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); 
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <p><b>Welcome!</p></b>
+            <p><b>SignUp Here!!</p></b>
+            <img src="signup-removebg-preview.png">
+        </div>
+        <div class="container3">
+            <form  id="myform" action="http://localhost/OASIS_INTERNSHIP/task4/register3.php" onsubmit="return validate()" method="post">
+            <label><b>Name:</b></label><br>
+            <input type="text" id="name" name="name" class="all" required><br /><br />
+            <label><b>Gender:</b></label><br><br>
+            <input type="radio" id="male" name="gender" value="0"><label><b>Male</b></label>
+            <input type="radio" id="female" name="gender" value="1"><label><b>Female</b></label><br><br />
+            <label><b>PhoneNumber:</b></label><br>
+            <input type="tel" id="phno" name="phno" class="all" pattern="[1-9]{1}[0-9]{9}" required><br><br />
+            <label><b>Email-ID:</b></label><br>
+            <input type="email" id="mail" name="mail" class="all" required><br><br />
+            <label><b>Password:</b></label><br>
+            <input type="password" id="pd" name="pd" class="all" required><br><br />
+            <label><b>Re-enter Password:</b></label><br>
+            <input type="password" id="pd2" name="pd2" class="all" required><br><br>
+            <button type="submit" class="button button2">SignUp</button>
+            <p><center>Already have an account?<a href="login.html">Login here</a></p></center>
+            
+        </div>
+    </div>
+
+</form>
+
+    <script>
+       function validate()
+       {
+            var forms=document.getElementById("myform");
+            var gender_sel=0;
+            for(i=0;i<forms.gender.length;i++)
+            {
+                if(forms.gender[i].checked)
+                {
+                    gender_sel++;
+                }
+            }
+            if(gender_sel==0)
+            {
+                alert("You must select your gender");
+                return false;
+            }
+            var pd=document.getElementById("pd").value;
+            var pd2=document.getElementById("pd2").value;
+            if(pd.length<8 || pd2.length<8)
+            {
+                alert("Password must have atleast 8 characters");
+                return false;
+            }
+            if(pd!=pd2){
+                alert("Passwords must be same");
+                document.getElementById("pd").focus();
+                return false;
+            }
+       }
+       
+
+       
+
+    </script>
+    </body>
+
+
+</html>
