@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>Login-Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, rgb(96, 96, 197), rgb(17, 17, 90));
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.9);
+            width: 350px;
+            background-color: white;
+        }
+
+
+
+
+
+        .container label {
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 5px;
+            font-size: large;
+            text-align: right;
+
+        }
+
+        .container .all {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid rgb(30, 30, 95);
+            border-radius: 8px;
+        }
+
+        input[type="text"]:hover,
+        input[type="password"]:hover {
+            box-shadow: 0 0 5px;
+            outline: none;
+        }
+
+        .button {
+            background-color: #10297a;
+            border: none;
+            color: white;
+            padding: 5px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            transition: transform 0.4s;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 93%;
+        }
+
+
+        .button2:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+            transform: scale(1.04);
+        }
+
+        p {
+            font-size: 38px;
+            width: 300px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .details {
+            margin-left: 25px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="details">
+            <form action="http://localhost/OASIS_INTERNSHIP/task4/login.php" onsubmit="return validate()" method="post">
+                <p><b>Sign In Here!</b></p>
+                <label><b>Name:</b></label><br>
+                <input type="text" id="name" name="name" class="all"><br><br>
+                <label><b>Password:</b></label><br>
+                <input type="password" id="pd" name="pd" class="all"><br><br>
+                <button type="submit" class="button button2">Sign In</button>
+
+        </div>
+    </div>
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value;
+            var pd = document.getElementById("pd").value;
+            if (name == "") {
+                alert("You must enter the username");
+                return false;
+            }
+            if (pd == "") {
+                alert("You must enter the password");
+                return false;
+            }
+
+        }
+
+    </script>
+    </form>
+</body>
+
+</html>
+
+
