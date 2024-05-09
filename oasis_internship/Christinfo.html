@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Christ the Redeemer</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .heading {
+            width: 100%;
+            color: rgb(255, 255, 255);
+            background-color: rgb(193, 56, 234); /* Updated heading color */
+            float: left;
+            font-size: xx-large;
+            margin: 0;
+            top: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding-top: 60px; /* Adjust the initial padding-top value */
+        }
+
+        .heading h2 {
+            margin: 0; /* Remove default margin on h2 */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .content {
+            background-color: rgb(223, 168, 212); /* Updated content background color */
+            margin: 0;
+            padding-top: 40px; /* Adjust the initial padding-top value */
+            transition: padding-top 0.5s; /* Add a smooth transition effect */
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .sticky {
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading" id="pageHeader">
+        <h2>Christ the Redeemer</h2>
+    </div>
+
+    <div class="content">
+        <p><b>Overview: Iconic Statue of Christ</b></p>
+
+        <p>Christ the Redeemer, an iconic statue overlooking Rio de Janeiro, is a symbol of faith, cultural richness, and
+            architectural grandeur. Perched atop the Corcovado mountain, this colossal monument invites visitors to
+            experience breathtaking panoramic views of the city and the surrounding landscapes.</p>
+
+        <p><b>History: A Testament of Faith</b></p>
+
+        <p>Construction: Completed in 1931, Christ the Redeemer stands as a testament to Brazil's strong Catholic
+            heritage. The idea for the statue emerged in the 1920s, and the renowned Brazilian engineer Heitor da Silva
+            Costa, along with French-Polish sculptor Paul Landowski, played crucial roles in its realization.</p>
+
+        <p>Artistic Significance: The art deco-style statue, standing at 30 meters tall, portrays Jesus Christ with
+            outstretched arms, symbolizing peace and embracing all of humanity. The intricate details of the face and
+            hands showcase the skill and craftsmanship of the artists involved.</p>
+
+        <p><b>Architectural Marvel: Corcovado Summit</b></p>
+
+        <p>Location: Situated on the Corcovado mountain in the Tijuca Forest National Park, reaching the summit is an
+            adventure in itself. Visitors can take a train, hike, or drive to the top, where they are rewarded with
+            awe-inspiring views of Rio de Janeiro and its surroundings.</p>
+
+        <p>Accessible Platform: A viewing platform at the base of the statue allows visitors to marvel at the intricate
+            details of Christ the Redeemer up close while enjoying the stunning vistas of the city, Sugarloaf Mountain,
+            and the Atlantic Ocean.</p>
+
+        <p><b>Cultural Significance: Rio's Guardian</b></p>
+
+        <p>Celebrations and Events: Christ the Redeemer is a focal point during various religious and cultural events in
+            Rio de Janeiro, including New Year's Eve celebrations. The statue is often illuminated, creating a
+            mesmerizing spectacle against the night sky.</p>
+
+        <p>Tourist Attraction: Welcoming millions of visitors each year, the statue has become a globally recognized
+            tourist attraction. Its significance goes beyond religious symbolism, representing the vibrant spirit of
+            Brazil.</p>
+
+        <center><button type="button" style="background-color:rgb(193, 56, 234)" onclick="send()">More Places 
+                around....</button></center>
+
+        <div>
+            <p id="extra"></p>
+        </div>
+    </div>
+
+    <script>
+        var head = document.getElementById("pageHeader");
+        var content = document.querySelector(".content");
+        var distance = head.offsetTop;
+
+        window.addEventListener("scroll", fixHeader);
+
+        function fixHeader() {
+            if (window.pageYOffset > distance) {
+                head.classList.add("sticky");
+                content.style.paddingTop = head.offsetHeight + "px";
+            } else {
+                head.classList.remove("sticky");
+                content.style.paddingTop = "40px"; // Adjust the padding-top to your desired value when not sticky
+            }
+        }
+
+        function send() {
+            var id = "wonder6";
+            fetch(`http://localhost/wp_project/Machu.php?id=${id}`, { method: 'GET' })
+                .then(res => res.text())
+                .then(txt => document.getElementById("extra").innerHTML = txt);
+        }
+    </script>
+
+</body>
+
+</html>
